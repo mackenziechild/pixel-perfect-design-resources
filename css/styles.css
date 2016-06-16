@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "proxima-nova", sans-serif; }
+
+.wrapper {
+  width: 1140px;
+  max-width: 90%;
+  margin: 0 auto; }
+
+.banner {
+  background: #30313d url(../images/bg-pattern.svg);
+  background-repeat: repeat; }
+  .banner h1 {
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 2em 0;
+    margin: 0;
+    font-size: 5em;
+    line-height: 0.85; }
+
+.nav {
+  background: #3a3b49; }
+  .nav a, .nav label {
+    text-transform: uppercase;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #FFF;
+    font-weight: 700;
+    margin-right: 2em; }
+    .nav a:hover, .nav label:hover {
+      color: #4ad7b1; }
+  .nav label {
+    margin-right: 0;
+    border-right: 1px solid #4ad7b1;
+    padding-right: 1.5em; }
+    .nav label:hover {
+      color: #ffffff; }
+  .nav input[type="search"] {
+    background: transparent;
+    outline: none;
+    border: none;
+    padding: 2em 1em;
+    color: #FFF;
+    font-style: italic;
+    font-size: 1.5em;
+    font-weight: 400; }
+
+.resources {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+  .resources li {
+    width: 25%;
+    float: left;
+    display: inline-block;
+    position: relative;
+    transition: transform 0.4s;
+    overflow: hidden;
+    transition: transform 0.4s, opacity 0.1s 0.3s;
+    display: table; }
+    .resources li img {
+      width: 100%;
+      max-width: 100%; }
+  .resources .resource_info {
+    background: rgba(74, 215, 177, 0.85);
+    padding: 2.5em 10%;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: auto;
+    bottom: 0;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 0.4s, opacity 0.1s 0.3s;
+    display: table-cell;
+    vertical-align: middle; }
+    .resources .resource_info h2 {
+      margin: 0 0 1em 0;
+      color: #FFF;
+      font-size: 1.5em;
+      line-height: 1;
+      text-transform: uppercase; }
+    .resources .resource_info .button {
+      border: 2px solid #ffffff;
+      padding: 1em 1.5em;
+      border-radius: 0.5em;
+      color: #ffffff;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 0.9em;
+      font-weight: 700;
+      transition: all 0.4s ease-in-out; }
+      .resources .resource_info .button:hover {
+        border: 2px solid #30313d;
+        color: #30313d; }
+    .resources .resource_info .price {
+      display: inline;
+      font-weight: 700;
+      color: #30313d;
+      padding-left: 1.5em; }
+  .resources li:hover img {
+    transform: scale(1.5);
+    transition: transform 0.4s, opacity 0.1s 0.3s; }
+  .resources li:hover .resource_info {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: transform 0.4s, opacity 0.1s; }
+
+@media only screen and (max-width: 1250px) {
+  .resources li {
+    width: 33.333%; }
+    .resources li .resource_info {
+      padding: 3em 12%; } }
+@media only screen and (max-width: 900px) {
+  .banner h1 {
+    padding: 1.5em 0;
+    font-size: 3.5em; }
+
+  .nav a, .nav label {
+    font-size: 1.1em;
+    margin-right: 1em; }
+  .nav label {
+    margin-right: 0;
+    border-right: 1px solid #4ad7b1;
+    padding-right: 1.5em; }
+  .nav input[type="search"] {
+    padding: 1.5em;
+    font-size: 1.1em; }
+
+  .resources li {
+    width: 50%; }
+    .resources li .resource_info {
+      padding: 3.5em 15%; } }
+@media only screen and (max-width: 600px) {
+  .banner h1 {
+    padding: 1.5em 0;
+    font-size: 2.5em; }
+
+  .nav a {
+    display: none; }
+
+  .resources li {
+    width: 100%; } }
